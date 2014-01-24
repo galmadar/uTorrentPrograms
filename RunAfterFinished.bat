@@ -1,0 +1,1 @@
+java -jar RunAfterFinished\target\run-after-finished-0.0.1-jar-with-dependencies.jar %1%
