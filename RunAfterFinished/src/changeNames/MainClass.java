@@ -8,7 +8,7 @@ public class MainClass {
 	private static final Logger logger = LogManager.getLogger("defaultLogger");
 
 	public static void changeNames(String dirPath) {
-		logger.debug("CHANGENAMES MODULE NOT IMPLEMENTED YET!");
+		logger.warn("CHANGENAMES MODULE NOT IMPLEMENTED YET!");
 	}
 
 }
