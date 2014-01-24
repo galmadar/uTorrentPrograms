@@ -9,8 +9,8 @@
 			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
 		</Console>
 		
-		<RollingFile name="RollingFile" fileName="D:/uTorrent/ProgramsToRun/logs/convertToUtf8/convertToUtf8roll.log"
-			filePattern="D:/uTorrent/ProgramsToRun/logs/convertToUtf8/convertToUtf8roll-%d{MM-dd-yyyy}-%i.log">
+		<RollingFile name="DefaultRollingFile" fileName="D:/uTorrent/ProgramsToRun/logs/uTorrentPrograms.log"
+			filePattern="D:/uTorrent/ProgramsToRun/logs/uTorrentPrograms-%d{MM-dd-yyyy}-%i.log">
 			<PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} %4p (%C:%L) - %m%n" />
 			<Policies>
 				<TimeBasedTriggeringPolicy />
@@ -20,9 +20,9 @@
 	</Appenders>
 
 	<Loggers>
-		<Logger name="convertToUtf8Logger" level="info" additivity="false">
+		<Logger name="defaultLogger" level="info" additivity="false">
 			<AppenderRef ref="Console" />
-			<AppenderRef ref="RollingFile" />
+			<AppenderRef ref="DefaultRollingFile" />
 		</Logger>
 
 		<Root level="debug">

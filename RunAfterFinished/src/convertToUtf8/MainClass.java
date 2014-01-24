@@ -18,8 +18,8 @@ import org.apache.logging.log4j.Logger;
 
 public class MainClass {
 	
-	public static final String DEFAULT_ENCODING = "UTF-8";
-	public static final Logger logger = LogManager.getLogger("convertToUtf8Logger");
+	private static final String DEFAULT_ENCODING = "UTF-8";
+	private static final Logger logger = LogManager.getLogger("defaultLogger");
 
 	public static void convertToUtf8(String dirPath, String encoding) {
 		logger.info("Starting converting subtitles files!");
@@ -46,7 +46,7 @@ public class MainClass {
 		logger.info("done convertToUtf8 program on dirPath {}", dirPath);
 	}
 	
-	public static void convert(File sourceFile, File targetFile, String encoding) {
+	private static void convert(File sourceFile, File targetFile, String encoding) {
 	    BufferedReader br = null;
 	    StringBuilder builder = new StringBuilder();
 	    BufferedWriter bw = null;
@@ -104,7 +104,7 @@ public class MainClass {
 		}
 	}
 	
-	public static List<File> getSrtsFile(String directoryPath) {
+	private static List<File> getSrtsFile(String directoryPath) {
 		List<File> allSrtFiles = new ArrayList<File>();
 		logger.info("Try to watch \"{}\" directory", directoryPath);
 		File directory = new File(directoryPath);
